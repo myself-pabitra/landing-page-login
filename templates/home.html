@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Brothers</title> {% endcomment %}
+    <style>
+      .my_container {
+        background-color: #6610f2;
+        padding-bottom: 1rem;
+      }
+      .description {
+        margin-top: 8rem;
+        margin-left: 2.2rem;
+      }
+      .description_image {
+        margin-left: 55px;
+        width: 50%;
+        height: 50%;
+      }
+      .my_container2 {
+        background-color: antiquewhite;
+      }
+      .my_container img {
+        max-width: 70%;
+        margin-left: 70px;
+
+      }
+      .my_container2 img {
+        max-width: 70%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .para {
+        margin-top: 4.5rem;
+        /* display: block; */
+        margin-left: auto;
+        margin-right: auto;
+        width: 17em;
+      }
+      .my_container3{
+        background-color: cornsilk;
+      }
+      .my_container3 img{
+        max-width: 15%;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- First container start here  -->
+    <div class="container-fluid my_container">
+        
+        {% include 'navbar.html' %}
+
+      <div class="row">
+        <div class="col-sm-6 text-light">
+          <div class="description fw-bold fs-2 text-center">
+            <p>HI!</p>
+            <p>WE CREATE APP</p>
+            <p>DEVELOPMENT</p>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          {% comment %} <img src="./images/4861083-removebg-preview.png" alt="" /> {% endcomment %}
+          <img src="{% static '/images/4861083-removebg-preview.png' %}" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- First container ends here  -->
+
+    <!-- Second container starts here  -->
+
+    <div class="container-fluid my_container2">
+      <div class="row">
+        <div class="col-sm-2"></div>
+
+        <div class="col-sm-6">
+          {% comment %} <img src="./images/2nd pnd.png" alt="" /> {% endcomment %}
+          <img src="{% static './images/2nd pnd.png' %}" alt="" />
+          
+        </div>
+
+        <div class="col-sm-4">
+          <div class="para">
+            <p class="h4 fw-bolder">We think</p>
+            <p class="h4 fw-bolder">Another way</p>
+            <p class="h5 mt-3">
+              A large image can be perfect on a big computer screen, but useless
+              on a small device. Why load a large image when you have to scale
+              it down anyway? To reduce the load, or for any other reasons, you
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second container ends here  -->
+
+
+
+    <!-- Third container starts here  -->
+    <div class="container-fluid my_container3">
+      <div class="row">
+        <div class="col-sm-2"></div>
+
+
+        <div class="col-sm-8 text-center">
+          <p class="h3 fw-bolder mt-3"> Our Clients </p>
+          
+        <div class="clients">
+          {% comment %} <img src="./images/accenture.png" alt="accenture">
+          <img src="./images/Capgemini_Logo_2COL_RGB.png" alt="capgemini">
+          <img src="./images/cognizant.png" alt="cognizant">
+          <img src="./images/pax.png" alt="pax">
+          <img src="./images/wework.png" alt="wework"> {% endcomment %}
+          <img src="{% static '/images/accenture.png' %}" alt="accenture">
+          <img src="{% static '/images/Capgemini_Logo_2COL_RGB.png' %}" alt="capgemini">
+          <img src="{% static '/images/cognizant.png' %}" alt="cognizant">
+          <img src="{% static '/images/pax.png' %}" alt="pax">
+          <img src="{% static '/images/wework.png' %}" alt="wework">
+        </div>
+
+        </div>
+
+        <div class="col-sm-2"></div>
+      </div>
+    </div>
+
+    <!-- Third container ends here  -->
+
+  </body>
+</html>
+
+
+
+
+{% comment %} {% include 'navbar.html' %} {% endcomment %}
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+{% block title %}Home{% endblock title %}

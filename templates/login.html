@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    {% include 'navbar.html' %}
+<!-- 
+ <div class="container-sm w-50 pt-5">
+    <div class="text-center">
+<form >
+    <input type="text" class='form-control' placeholder="Username"> <br>
+    <input type="text" class='form-control' placeholder="Password"> <br>
+    <button class="btn btn-lg btn-warning">Login</button>
+</form>
+</div>
+</div>  -->
+<style>
+    .form-inputs{
+        width: 50%;
+        height: 3rem;
+        margin: 15px;
+        border-radius: 6px;
+        text-align: center;
+
+    }
+    .my_container{
+        /* width: 35%; */
+        margin-top: 8rem;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+
+    button.form-inputs {
+    width: 37%;
+    background-color: #fd7e14 !important ;
+}
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4"></div>
+
+        <div class="col-md-4 my_container">
+            <div class="text-center">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <p class="h4 mt-3 text-decoration-underline" style="color: #20c997;">Login Your Account Here!</p>
+                    <input type="text" class="form-inputs" name="username" placeholder="Enter Username">
+                    <input type="password" class="form-inputs" name="password" placeholder="Enter Password">
+                    <button class="btn btn-lg btn-warning form-inputs">Login</button>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="col-md-4"></div>
+    </div>
+</div>
+
+
+
+
+{% endblock content %}
+
+
+
+
+
+
+{% block title %}
+
+Login
+
+{% endblock title%}

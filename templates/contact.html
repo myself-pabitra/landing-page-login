@@ -1,0 +1,21 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+{% include 'navbar.html' %}
+
+<div class="container-sm w-50">
+  <div class="text-center mt-5">
+    <form action="">
+      <textarea
+        type="text"
+        placeholder="Write your Message Here"
+        class="form-control m-2"
+      ></textarea>
+      <input type="text" placeholder="Email" class="form-control m-2" />
+      <button type="submit" class="btn btn-success btn-lg">Send Message</button>
+    </form>
+  </div>
+</div>
+
+{% endblock content %} 
+{% block title %} Contact {% endblock title %}
