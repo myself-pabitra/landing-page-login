@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+
+<div class="container-md flex-container h-100 w-100 d-flex  justify-content-center">
+    <div class="text-center px-4 py-3 rounded" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+        <p class="h3 text-success m-4 text-decoration-underline">Register Here!</p>
+
+        {%for msg in messages%}
+        <div class="cont">
+        <div class="alert alert-danger" role="alert">
+            {{msg}}
+        </div>
+        </div>
+        {%endfor%}
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            <input type="text" class="form-control mt-3" name = "username"  placeholder="Username">
+            <input type="email" class="form-control mt-3" name = "email"  placeholder="Email">
+            <input type="number" class="form-control mt-3" name = "phone_number" placeholder="Phone Number">
+            <input type="password" class="form-control mt-3" name = "password"  placeholder="Password">
+            <input type="password" class="form-control mt-3" name = "confirm_password"  placeholder="Confirm Password">
+            <button type="submit" class="btn btn-info mt-3">Register</button>
+        </form>
+        <p class="mt-2">Already have an Account <a href="{% url 'login' %}">Login here</a> </p>
+    </div>
+
+</div>
+{% endblock content %}
+
+
+{% block title %}
+    Register
+{% endblock title %}
+
